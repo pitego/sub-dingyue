@@ -338,16 +338,17 @@ export default {
           "suo.yt": "https://suo.yt/short",
         },
         customBackend: {
-          "个人VIP专属后端【vless reality+hy1+hy2】": "https://sub.vobb.dpdns.org",
-          "CM负载均衡后端【vless reality+hy1+hy2】": "https://subapi.cmliussss.net",
-          "CM应急备用后端【vless reality+hy1+hy2】": "https://subapi.fxxk.dedyn.io",
-          "肥羊增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
-          "肥羊备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
+          "♥个人VIP专属后端♥【vless reality+hy1+hy2】": "https://sub.vobb.dpdns.org",
+          "备用CM负载均衡后端【vless reality+hy1+hy2】": "https://subapi.cmliussss.net",
+          "备用CM应急备用后端【vless reality+hy1+hy2】": "https://subapi.fxxk.dedyn.io",
+          "备用肥羊增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
+          "备用肥羊备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
           nameless13提供: "https://www.nameless13.com",
           subconverter作者提供: "https://sub.xeton.dev",
           "sub-web作者提供": "https://api.wcc.best",
         },
         backendOptions: [
+          { value: "https://sub.vobb.dpdns.org" },
           { value: "https://subapi.cmliussss.net" },
           { value: "https://subapi.fxxk.dedyn.io" },
           { value: "https://url.v1.mk" },
@@ -358,7 +359,7 @@ export default {
         ],
         remoteConfig: [
           {
-            label: "CM规则",
+            label: "cm规则",
             options: [
               {
                 label: "CM_Online 默认版 识别港美地区(与Github同步)",
@@ -1300,7 +1301,7 @@ export default {
         .then(res => {
           this.backendVersion = res.data.replace(/backend\n$/gm, "");
           this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
-          let a = this.form.customBackend.indexOf("url.v1.mk") !== -1 || this.form.customBackend.indexOf("sub.d1.mk") !== -1;
+          let a = this.form.customBackend.indexOf("https://sub.vobb.dpdns.org") !== -1 || this.form.customBackend.indexOf("sub.d1.mk") !== -1;
           let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
           a ? this.$message.success(`${this.backendVersion}` + "肥羊负载均衡增强版后端，已屏蔽免费节点池（会返回403），额外支持vless reality+hysteria+hysteria2订阅转换") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}`);
         })
@@ -1311,4 +1312,5 @@ export default {
   }
 };
 </script>
+
 
