@@ -338,6 +338,7 @@ export default {
           "suo.yt": "https://suo.yt/short",
         },
         customBackend: {
+          "个人VIP专属后端【vless reality+hy1+hy2】": "https://sub.vobb.dpdns.org",
           "CM负载均衡后端【vless reality+hy1+hy2】": "https://subapi.cmliussss.net",
           "CM应急备用后端【vless reality+hy1+hy2】": "https://subapi.fxxk.dedyn.io",
           "肥羊增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
@@ -932,7 +933,7 @@ export default {
       window.open(downld);
     },
     gotoBasicVideo() {
-      this.$alert("别忘了关注友善的肥羊哦！", {
+      this.$alert("嘿嘿嘿！", {
         type: "warning",
         confirmButtonText: '确定',
         customClass: 'msgbox',
@@ -943,7 +944,7 @@ export default {
         });
     },
     gotoAdvancedVideo() {
-      this.$alert("别忘了关注友善的肥羊哦！", {
+      this.$alert("嘿嘿嘿！", {
         type: "warning",
         confirmButtonText: '确定',
         customClass: 'msgbox',
@@ -1310,3 +1311,4 @@ export default {
   }
 };
 </script>
+
